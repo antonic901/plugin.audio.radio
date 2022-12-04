@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+	<category label="General">
+		<setting id="api" type="text" label="FMStream API:" option="urlencoded" default="http://fmstream.org/index.php"></setting>
+        <setting id="sort-streams" type="bool" label="Sort streams by quality:" default="false"/>
+		<setting id="search-format" type="bool" label="Auto format search query:" default="true"/>
+	</category>
+</settings>
