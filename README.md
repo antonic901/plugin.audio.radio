@@ -1,5 +1,5 @@
 # Radio for Original Xbox
-Brand new Radio plugin for XBMC4Xbox! You can now enjoy listening over 30k stations from all around the world on Origina Xbox! Big thanks to [FMStream.org](http://fmstream.org) for allowing me to use their API.
+Brand new Radio plugin for XBMC4Xbox! You can now enjoy listening over 30k stations from all around the world on Original Xbox! Big thanks to [FMStream.org](http://fmstream.org) for allowing me to use their API.
 ![Fanart](https://github.com/antonic901/xbox-radio/blob/master/images/screenshot003.bmp?raw=true)
 
 ## Table of Contents
