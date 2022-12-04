@@ -5,34 +5,33 @@ Brand new Radio plugin for XBMC4Xbox! You can now enjoy listening over 30k stati
 ## Table of Contents
 - [Info](#info)
 - [Requirements](#requirements)
-- [Setup Guide](#setup-guide)
+- [How to install](#how-to-install)
 - [Running](#running)
 - [Functionalities](#functionalities)
-  * [Xbox functionalities](#xbox)
-  * [PC funcionalities](#pc)
 - [Video](#video)
 - [Some images](#some-images)
 
 ## Info
-This is plugin for XBMC4Xbox that allows streaming of Radio stations on Original Xbox. It's using [FMStream.org](http://fmstream.org) API to fetch streams.
+This is plugin for XBMC4Xbox that allows streaming of Radio stations on Original Xbox. It's using [FMStream.org](http://fmstream.org) API to fetch streams. Logo and Fanart are taken from official Kodi [Radio plugin](https://github.com/XBMC-Addons/plugin.audio.radio_de)
 
 ## Requirements
  - You need softmodded or hardmodded Xbox
  - You need latest release of [XBMC4Xbox](https://www.dropbox.com/sh/8mcip8xsfe1zjap/AABSR3_toPPiFn-7OqwQY_JIa) as your main Dashboard
+ - You know how to transfer files between your PC and Xbox (a.k.a know how to use FTP to transfer files)
 
-## Setup Guide
+## How to install
  - Download latest release from [here](https://github.com/antonic901/xbox-radio/releases)
  - Extract downloaded archive.
- - Before we begin installing plugin you first need to checkout does your XBMC4Xbox have all required modules. Go to Q:\scripts\.modules and check does these folder contains these four modules:
-    + script.module.beautifulsoup
-    + script.module.xbmcaddon
-    + script.module.xbmcswift2 (there is probaly one that you don't have, but don't worry!)
-    + script.module.xbmcvfs
- -
+ - Before we begin installing plugin you first need to checkout does your XBMC4Xbox have all required modules. Go to **Q:\scripts\\.modules** and check does this folder contain these four modules:
+    + **script.module.beautifulsoup**
+    + **script.module.xbmcaddon**
+    + **script.module.xbmcswift2** (this is probably the one that you don't have, but don't worry!)
+    + **script.module.xbmcvfs**
+ - If you have all of four modules installed jump to next step, but if not keep reading! When you extracted downloaded archive you could notice two folders of which one is **modules**. Inside this folder you will find all modules required by this plugin. Depending on which module you are missing, copy that module to **Q:\scripts\\.modules** (INFO: in most cases you won't have xmbcswift2 module. You can also install it using Addons4Xbox Installer)
+ - Finally, install plugin by copying **Radio** folder from archive to **Q:\plugins\music**
 
 ## Running
-### Xbox
- - Open plugin from XBMC4Xbox located in Music -> Plugins
+- Open plugin from XBMC4Xbox located in Music -> Plugins
 ## Functionalities
 Status values:
 - ✓ - Functionality implemented
@@ -59,4 +58,3 @@ TODO
 ![Stations](https://github.com/antonic901/xbox-radio/blob/master/images/screenshot001.bmp?raw=true)
 ![Streams](https://github.com/antonic901/xbox-radio/blob/master/images/screenshot002.bmp?raw=true)
 ![Playing](https://github.com/antonic901/xbox-radio/blob/master/images/screenshot003.bmp?raw=true)
-
