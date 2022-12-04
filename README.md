@@ -16,7 +16,7 @@ This is plugin for XBMC4Xbox that allows streaming of Radio stations on Original
 
 ## Requirements
  - You need softmodded or hardmodded Xbox
- - You need latest release of [XBMC4Xbox](https://www.dropbox.com/sh/8mcip8xsfe1zjap/AABSR3_toPPiFn-7OqwQY_JIa) as your main Dashboard
+ - You need latest release of [XBMC4Xbox](https://www.xbmc4xbox.org.uk/) as your main Dashboard
  - You know how to transfer files between your PC and Xbox (a.k.a know how to use FTP to transfer files)
 
 ## How to install
