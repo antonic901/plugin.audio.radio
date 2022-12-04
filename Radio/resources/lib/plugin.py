@@ -17,14 +17,14 @@ def add_stations(stations):
             if station['id'] in favorites:
                 context_menu = [
                     (
-                        'Remove from My Stations',
+                        plugin.get_string(830),
                         'RunPlugin({})'.format(plugin.url_for('my_stations_remove', id=station['id']))
                     )
                 ]
             else:
                 context_menu = [
                     (
-                        'Add to My Stations',
+                        plugin.get_string(831),
                         'RunPlugin({})'.format(plugin.url_for('my_stations_add', station=json.dumps(station)))
                     )
                 ]
@@ -46,39 +46,48 @@ def get_icon(icon):
 def show_root_menu():
     items = [
         {
-            'label': 'Featured Stations',
+            'label': plugin.get_string(30301),
             'path': plugin.url_for('featured'),
             'icon': get_icon('fire2.png')
         },
         {
-            'label': 'Random Stations',
+            'label': plugin.get_string(30302),
             'path': plugin.url_for('random'),
             'icon': get_icon('logo.png')
         },
         {
-            'label': 'Browse by country',
+            'label': plugin.get_string(30303),
             'path': plugin.url_for('browse_by_country'),
             'icon': get_icon('world.png')
         },
         {
-            'label': 'Browse by language',
+            'label': plugin.get_string(30304),
             'path': plugin.url_for('browse_by_language'),
             'icon': get_icon('language.png')
         },
         {
-            'label': 'Browse by genres',
+            'label': plugin.get_string(30305),
             'path': plugin.url_for('browse_by_genre'),
             'icon': get_icon('genre.png')
         },
         {
-            'label': 'Search',
+            'label': plugin.get_string(30306),
             'path': plugin.url_for('search_menu'),
             'icon': get_icon('search.png')
         },
         {
-            'label': 'My Stations',
+            'label': plugin.get_string(30307),
             'path': plugin.url_for('my_stations'),
             'icon': get_icon('star.png')
+        },
+        {
+            'label': plugin.get_string(30308),
+            'path': plugin.url_for('settings'),
+            'icon': get_icon('settings.png')
+        },
+        {
+            'label': plugin.get_string(30300),
+            'icon': get_icon('logo.png')
         }
     ]
     return plugin.finish(items)
@@ -110,7 +119,7 @@ def country(alpha2Code, page):
     items = add_stations(fmstream.fetch(c=alpha2Code, n=(page - 1) * 100)['data'])
     if items:
         items.append({
-            'label': 'Next page >> {}'.format(page + 1),
+            'label': plugin.get_string(732).format(page + 1),
             'path': plugin.url_for('country', alpha2Code=alpha2Code, page=page + 1),
             'icon': get_icon('arrow-right.png')
         })
@@ -135,7 +144,7 @@ def language(alpha2Code, page):
     items = add_stations(fmstream.fetch(l=alpha2Code, n=(page - 1) * 100)['data'])
     if items:
         items.append({
-            'label': 'Next page >> {}'.format(page + 1),
+            'label': plugin.get_string(732).format(page + 1),
             'path': plugin.url_for('language', alpha2Code=alpha2Code, page=page + 1),
             'icon': get_icon('arrow-right.png')
         })
@@ -159,7 +168,7 @@ def genre(genre, page):
     items = add_stations(fmstream.fetch(style=genre, n=(page - 1) * 100)['data'])
     if items:
         items.append({
-            'label': 'Next page >> {}'.format(page + 1),
+            'label': plugin.get_string(732).format(page + 1),
             'path': plugin.url_for('genre', genre=genre, page=page + 1),
             'icon': get_icon('arrow-right.png')
         })
@@ -168,16 +177,16 @@ def genre(genre, page):
 @plugin.route('/search_menu')
 def search_menu():
     items = [{
-        'label': 'Enter search query',
+        'label': plugin.get_string(630),
         'path': plugin.url_for('search'),
         'icon': get_icon('search.png')
     }]
     for query in reversed(history.keys()):
         items.append({
-            'label': 'History: {}'.format(query),
+            'label': plugin.get_string(631).format(query),
             'context_menu': [
                 (
-                    'Delete from history',
+                    plugin.get_string(832),
                     'RunPlugin({})'.format(plugin.url_for('search_history_delete', query=query))
                 )
             ],
@@ -185,6 +194,14 @@ def search_menu():
             'icon': get_icon('recent.png')
         })
     return plugin.finish(items)
+
+@plugin.route('/search')
+def search():
+    query = plugin.keyboard(heading=plugin.get_string(733))
+    search_history_add(query)
+    if query:
+        url = plugin.url_for('search_result', query=query, page=1)
+        plugin.redirect(url)
 
 def search_history_add(query):
     history.update({query: 'query'})
@@ -195,21 +212,13 @@ def search_history_delete(query):
     del history[query]
     history.sync()
 
-@plugin.route('/search')
-def search():
-    query = plugin.keyboard(heading='Search for radio station')
-    search_history_add(query)
-    if query:
-        url = plugin.url_for('search_result', query=query, page=1)
-        plugin.redirect(url)
-
 @plugin.route('/search_result/<query>/<page>')
 def search_result(query, page):
     page = int(page)
     items = add_stations(fmstream.fetch(s=query, n=(page - 1) * 100)['data'])
     if items:
         items.append({
-            'label': 'Next page >> {}'.format(page + 1),
+            'label': plugin.get_string(732).format(page + 1),
             'path': plugin.url_for('search_result', query=query, page=page + 1),
             'icon': get_icon('arrow-right.png')
         })
@@ -230,6 +239,10 @@ def my_stations_add(station):
 def my_stations_remove(id):
     del favorites[str(id)]
     favorites.sync()
+
+@plugin.route('/settings')
+def settings():
+    plugin.open_settings()
 
 @plugin.route('/streams/<streams>')
 def streams(streams):

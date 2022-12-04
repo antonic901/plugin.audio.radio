@@ -12,7 +12,7 @@ class FmStreamApi():
     def make_request(self, URL, HEADERS, PARAMS):
         response = requests.get(URL, headers=HEADERS, params=PARAMS)
         if response.status_code != 200:
-            self.plugin.notify('FMStream API returned: {}'.format(response.status_code), title="FMStream API error")
+            self.plugin.notify(plugin.get_string(730).format(response.status_code), title=plugin.get_string(731))
             return None
         return response.json()
 
