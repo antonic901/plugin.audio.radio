@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<strings>
+    <!-- Root menu -->
+    <string id="30300">[B]Омогућио FMStream.org. Подржите их![/B]</string>
+    <string id="30301">Популарне станице</string>
+    <string id="30302">Насумичне станице</string>
+    <string id="30303">Претрага по држави</string>
+    <string id="30304">Претрага по језику</string>
+    <string id="30305">Претрага по жанру</string>
+    <string id="30306">Претрага</string>
+    <string id="30307">Моје станице</string>
+    <string id="30308">Подешавања</string>
+
+    <!-- Search menu -->
+    <string id="630">Претражуј...</string>
+    <string id="631">Историја: {}</string>
+
+    <!-- Info Messages -->
+    <string id="730">FMStream API вратио: {}</string>
+    <string id="731">FMStream API грешка</string>
+    <string id="732">Следећа станица >> {}</string>
+    <string id="733">Претражи радио станице</string>
+
+    <!-- Context menu -->
+    <string id="830">Обриши из Моје станице</string>
+    <string id="831">Додај у Моје станице</string>
+    <string id="832">Обриши из историје</string>
+
+    <!-- Settings -->
+    <string id="930">FMStream API:</string>
+    <string id="931">Сортирај стримове по квалитету:</string>
+    <string id="932">Аутоматски форматирај упит за претрагу:</string>
+</strings>
