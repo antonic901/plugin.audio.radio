@@ -37,7 +37,7 @@ def add_stations(stations):
         })
     return items
 
-def get_icon(icon):
+def get_icon(icon='logo.png'):
     # When Estuary skin get port we will be using this
     # return "{}\\resources\\icons\\{}".format(os.getcwd(), icon)
     return "{}\\resources\\icons\\{}".format(os.getcwd(), 'logo.png')
@@ -198,8 +198,8 @@ def search_menu():
 @plugin.route('/search')
 def search():
     query = plugin.keyboard(heading=plugin.get_string(733))
-    search_history_add(query)
     if query:
+        search_history_add(query)
         url = plugin.url_for('search_result', query=query, page=1)
         plugin.redirect(url)
 
@@ -249,7 +249,7 @@ def streams(streams):
     items = []
     for stream in json.loads(streams):
         try:
-            if stream['codec_name'] == 'mp3':
+            if stream['codec_name'] in ['mp3', 'mp3u']:
                 items.append({
                     'label': stream['url'],
                     'path': plugin.url_for('play', url=stream['url']),

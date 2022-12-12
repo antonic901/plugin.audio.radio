@@ -27,6 +27,7 @@
     <string id="832">Delete from history</string>
 
     <!-- Settings -->
+    <string id="929">General</string>
     <string id="930">FMStream API:</string>
     <string id="931">Sort streams by quality:</string>
     <string id="932">Auto format search query:</string>
