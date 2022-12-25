@@ -1,6 +1,8 @@
 # Radio for Original Xbox
 Brand new Radio plugin for XBMC4Xbox! You can now enjoy listening over 30k stations from all around the world on Original Xbox! Big thanks to [FMStream.org](http://fmstream.org) for allowing me to use their API.
 ![Fanart](https://github.com/antonic901/xbox-radio/blob/master/images/screenshot003.bmp?raw=true)
+## Support
+<a href="https://www.buymeacoffee.com/antonic901" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
 
 ## Table of Contents
 - [Info](#info)
@@ -48,11 +50,8 @@ Status values:
 | Searching (including history)|   ✓    |
 | My Stations (Favorites)            |   ✓    |
 
-## Support
-<a href="https://www.buymeacoffee.com/antonic901" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
-
 ## Video
-TODO
+[![Watch the video](https://github.com/antonic901/xbox-radio/blob/master/images/screenshot000.bmp?raw=true)](https://www.youtube.com/watch?v=8DGoBBOxTM4)
 ## Some images
 ![Home](https://github.com/antonic901/xbox-radio/blob/master/images/screenshot000.bmp?raw=true)
 ![Stations](https://github.com/antonic901/xbox-radio/blob/master/images/screenshot001.bmp?raw=true)
