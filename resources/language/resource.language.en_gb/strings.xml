@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<strings>
+    <!-- Root menu -->
+    <string id="30300">[B]Powered by FMStream.org. Please support them![/B]</string>
+    <string id="30301">Featured Stations</string>
+    <string id="30302">Random Stations</string>
+    <string id="30303">Browse by country</string>
+    <string id="30304">Browse by language</string>
+    <string id="30305">Browse by genres</string>
+    <string id="30306">Search</string>
+    <string id="30307">My Stations</string>
+    <string id="30308">Settings</string>
+
+    <!-- Search menu -->
+    <string id="630">Enter search query</string>
+    <string id="631">History: {}</string>
+
+    <!-- Info Messages -->
+    <string id="732">Next page >> {}</string>
+    <string id="733">Search for radio station</string>
+
+    <!-- Context menu -->
+    <string id="830">Remove from My Stations</string>
+    <string id="831">Add to My Stations</string>
+    <string id="832">Delete from history</string>
+
+    <!-- Settings -->
+    <string id="929">General</string>
+    <string id="931">Sort streams by quality:</string>
+    <string id="932">Auto format search query:</string>
+    <string id="933">List all streams:</string>
+</strings>
